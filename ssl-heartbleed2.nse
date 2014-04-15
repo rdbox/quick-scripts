@@ -41,7 +41,7 @@ local vulns = require('vulns')
 local have_tls, tls = pcall(require,'tls')
 assert(have_tls, "This script requires the tls.lua library from http://nmap.org/nsedoc/lib/tls.html")
 
-author = "Patrik Karlsson <patrik@cqure.net>"
+author = "Patrik Karlsson <patrik@cqure.net> improvised by Prajwal Panchmahalkar"
 license = "Same as Nmap--See http://nmap.org/book/man-legal.html"
 categories = { "vuln", "safe" }
 
