@@ -4,7 +4,7 @@
 #
 # This sends Change Cipher Spec record too early and observes server reply to
 # see if it responds with alert (i.e. if it's patched)
-# tweaked by Prajwal Panchmahalkar for output 
+# worked out by Prajwal Panchmahalkar (@pr4jwal)
 # default port is 443 unless specified 
 
 use strict;
