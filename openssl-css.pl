@@ -30,6 +30,7 @@ my $sock= new IO::Socket::INET(
 		PeerAddr	=>	$host,
 		PeerPort	=>	$port,
 		Proto		=> 'tcp',
+		Timeout => 3,
 	) or die "error: Could not create socket: $!\n";
 
 
