@@ -4,7 +4,7 @@
 #sample usage 1: python qualysparse.py -f qualys.csv -t "Feature Denial of Service"
 #sample usage 2: python qualysparse.py -f qualys.csv -s 5
 #python qualysparse.py -f qualys.csv -c CVE-2014-0224
-# Prajwal Panchmahalkar's script to parse Qualys Reports 
+# Prajwal Panchmahalkar's script to parse Qualys Reports prajwal@matriux.com
 
 
 import optparse
