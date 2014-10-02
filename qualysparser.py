@@ -1,9 +1,9 @@
 #['IP', 'DNS', 'NetBIOS', 'OS', 'IP Status', 'QID', 'Title', 'Type', 'Severity', 'Port', 'Protocol', 'FQDN', 'SSL', 'CVE ID', 'Vendor Reference', 'Bugtraq ID', 'CVSS Base', 'CVSS Temporal', 'Threat', 'Impact', 'Solution', 'Exploitability', 'Associated Malware', 'Results', 'PCI Vuln', 'Instance']
 
 #Row 8
-#sample usage 1: python qualysparse.py -f POD7.csv -t "Feature Denial of Service"
-#sample usage 2: python qualysparse.py -f POD7.csv -s 5
-#python qualysparse.py -f POD7.csv -c CVE-2014-0224
+#sample usage 1: python qualysparse.py -f qualysreport.csv -t "Feature Denial of Service"
+#sample usage 2: python qualysparse.py -f qualysreport.csv -s 5
+#python qualysparse.py -f qualysreport.csv -c CVE-2014-0224
 # Prajwal Panchmahalkar's script to parse Qualys Reports 
 
 
