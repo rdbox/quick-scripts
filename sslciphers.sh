@@ -54,4 +54,4 @@ fi
 done
 TLS12=$(echo "${TLS12})" | sed -e 's/:)/)/g')
 
-echo "$1,$SSL2,$SSL3,$TLS1,$TLS11,$TLS12";
+echo "$1,\n$SSL2 ,\n$SSL3 ,\n$TLS1 ,\n$TLS11 , \n$TLS12 \n";
