@@ -22,7 +22,7 @@ def main():
 		conn.request(req, "/")
 		res = conn.getresponse()
 		newResp =str(res.read())
-		if "Requested Range Not Satisfiable" in newResp:
+		if "Error 416" in newResp:
 		                print ": VULNERABLE"
 		elif " The request has an invalid header name" in newResp:
 		                print ": Looks Patched"
