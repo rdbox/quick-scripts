@@ -1,6 +1,7 @@
 import sys
 import httplib
 #Prajwal Panchmahalkar
+#usage ./MS15-034-detect.py <<IP>>
 def main():	 
 	ipAddr = sys.argv[1]
 	hexAllFfff = "18446744073709551615" 
