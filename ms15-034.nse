@@ -22,8 +22,7 @@ action = function(host, port)
 
     status, err = socket:send("GET / HTTP/1.1\r\nHost: stuff\r\nRange: bytes=0-18446744073709551615\r\n\r\n")
     local status,responseData = socket:receive(1024)
-    local booga
-    checkstring = string.match(responseData,"Error 416")
+    local checkstring = string.match(responseData,"Error 416")
     if checkstring then
         return "Possibly to be vulnerable to MS15-0034!!"
     end
