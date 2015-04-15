@@ -1,6 +1,6 @@
 import sys
 import httplib
-#Prajwal Panchmahalkar
+#Prajwal Panchmahalkar based on based on script from billbillthebillbill
 #usage ./MS15-034-detect.py <<IP>>
 def main():	 
 	ipAddr = sys.argv[1]
