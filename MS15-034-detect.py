@@ -1,5 +1,3 @@
-import socket
-import random
 import sys
 import httplib
 #Prajwal Panchmahalkar
