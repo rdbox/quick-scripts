@@ -1,6 +1,6 @@
 -- The Head Section --
 description =  "Script to detect MS15-034 on HTTP port"
-author = "Prajwal Panchmahalkar"
+author = "Prajwal Panchmahalkar based on script from billbillthebillbill"
 license = "Same as Nmap--See http://nmap.org/book/man-legal.html"
 categories = {"default", "safe"}
 
