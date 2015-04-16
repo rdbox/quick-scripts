@@ -16,14 +16,15 @@ portrule = shortport.http
 
 -- The Action Section --
 action = function(host, port)
-    local status, err, responseData
-    local socket = nmap.new_socket()
-    local status,err = socket:connect(host, port)
-
-    status, err = socket:send("GET / HTTP/1.1\r\nHost: stuff\r\nRange: bytes=0-18446744073709551615\r\n\r\n")
-    local status,responseData = socket:receive(1024)
-    local checkstring = string.match(responseData,"Error 416")
-    if checkstring then
-        return "Possibly to be vulnerable to MS15-0034!!"
+    local uri="/"
+    local options = {header={}}
+    options['header']['Host'] = "hostattack"
+    options['header']['Range'] = "bytes=0-18446744073709551615"
+    local response = http.get(host, port, uri, options)
+    if response then
+        local checkstring = string.match(response.body,"Error 416")
+        if checkstring then
+            return "Host looks to be vulnerable to MS15-0034!!"
+        end
     end
 end
