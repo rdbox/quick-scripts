@@ -9,7 +9,6 @@ local http = require "http"
 local nmap = require "nmap"
 local stdnse = require "stdnse"
 local string = require "string"
-local table  = require "table"
 
 -- The Rule Section --
 portrule = shortport.http
@@ -21,10 +20,7 @@ action = function(host, port)
     options['header']['Host'] = "hostattack"
     options['header']['Range'] = "bytes=0-18446744073709551615"
     local response = http.get(host, port, uri, options)
-    if response then
-        local checkstring = string.match(response.body,"Error 416")
-        if checkstring then
+    if (response.status == 416) then
             return "Host looks to be vulnerable to MS15-0034!!"
-        end
     end
 end
