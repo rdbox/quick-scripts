@@ -13,4 +13,4 @@ if [ ! -f "raspbian-jessie-lite.qcow" ]; then
 	qemu-img resize raspbian-jessie-lite.qcow +6G
 fi
 
-sudo qemu-system-arm -kernel ./kernel-qemu-4.4.34-jessie -append "root=/dev/sda2 panic=1 rootfstype=ext4 rw" -hda raspbian-jesse-lite.qcow -cpu arm1176 -m 256 -M versatilepb -no-reboot -serial stdio -net nic -net user -net tap,ifname=tap0,script=no,downscript=no
+sudo qemu-system-arm -kernel ./kernel-qemu-4.4.34-jessie -append "root=/dev/sda2 panic=1 rootfstype=ext4 rw" -hda raspbian-jessie-lite.qcow -cpu arm1176 -m 256 -M versatilepb -no-reboot -serial stdio -net nic -net user -net tap,ifname=tap0,script=no,downscript=no
