@@ -4,7 +4,7 @@ import sys
 import time
 # Usage python s2-057.py -u http://localhost:8080 -t /struts3-showcase/ -c calc
 # This script is created for detection and POCing the vulnerability. 
-# Prajwal's script to check for s2-057, CVE-2018-11776 based on payloads provided by jas502n (github)
+# Prajwal's script to check for s2-057, CVE-2018-11776 based on payloads provided by jas502n (https://github.com/jas502n/St2-057)
 
 def zeroday_check(tgtURL, tgtPATH, tgtCMD):
 	urlcheck = tgtURL+""+tgtPATH
