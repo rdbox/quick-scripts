@@ -2,9 +2,9 @@ import requests
 import optparse
 import sys
 import time
-# Usage python struts-0daycheck.py -u http://localhost:8080 -t /struts3-showcase/ -c calc
+# Usage python s2-057.py -u http://localhost:8080 -t /struts3-showcase/ -c calc
 # This script is created for detection and POCing the vulnerability. 
-# Prajwal's script to check for Apache Struts Zeroday s2-057, CVE-2018-11776 based on payloads provided by jas502n (github)
+# Prajwal's script to check for s2-057, CVE-2018-11776 based on payloads provided by jas502n (github)
 
 def zeroday_check(tgtURL, tgtPATH, tgtCMD):
 	urlcheck = tgtURL+""+tgtPATH
@@ -33,7 +33,7 @@ def main():
 		zeroday_check(tgtURL, tgtPATH)
 	else:
 		print "[-] Check the Target URL and Path"
-	print "[+] Apache Zero Day struts scan completed"
+	print "[+] Script complete"
 
 if __name__ == "__main__":
 	main()
